@@ -1,0 +1,91 @@
+/* ------------------------------------------
+  BACKGROUND STYLES
+--------------------------------------------- */
+@mixin bg-overlay-img($imgPath, $overlay-color: $black, $opacity: 0.7) {
+  background: linear-gradient(rgba($overlay-color, $opacity), rgba($overlay-color, $opacity), rgba($overlay-color,$opacity)), url($imgPath) no-repeat center center;
+  background-size: cover;
+}
+
+@mixin bg-overlay($overlay-color: $black, $opacity: 0.7) {
+  background: rgba($overlay-color, $opacity) no-repeat center center;
+}
+
+/* ------------------------------------------
+  BUTTON STYLES
+--------------------------------------------- */
+@mixin btn-border($btn-color: $white){
+  @include px-to-rem(border, 2px, solid, $btn-color);
+  color: $btn-color;
+  cursor: pointer;
+  @include set-font($font-regular, $regular, $font-regular);
+  @include px-to-rem(padding, 12px, 28px);
+  transition: background 0.3s ease-out, color 0.3s ease-out;
+
+  &:hover{
+    @media #{$tablet-large-or-higher} {
+      background: rgba($btn-color, 0.2);
+    }
+  }
+}
+
+@mixin btn-solid($bg-color: $black, $font-color: $white){
+  color: $font-color;
+  cursor: pointer;
+  background: $bg-color;
+  @include set-font($font-large, $semi-bold, $font-regular);
+  @include px-to-rem(padding, 14px, 28px);
+  transition: background 0.3s ease-out;
+
+  &:hover{
+    @media #{$tablet-large-or-higher} {
+      background: darken($bg-color, 10%);
+    }
+  }
+}
+
+/* ------------------------------------------
+  FONT STYLES
+--------------------------------------------- */
+@mixin set-font($size, $weight, $line-height){
+  @include px-to-rem(font-size, $size);
+  font-weight: $weight;
+  @include px-to-rem(line-height, $line-height);
+}
+
+/* ------------------------------------------
+  CONVERT PX TO REM
+--------------------------------------------- */
+//mixin also returns px fallback for older browsers
+@mixin px-to-rem($property, $params...) {
+  $max: length($params);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $param: nth($params, $i);
+
+    @if type-of($param) == number and (unit($param) == px or unitless($param)){
+        $value: strip-unit($param);
+        $base: strip-unit($BASELINE);
+        $remValues: #{$remValues + $value/$base}rem;
+        $pxValues: #{$pxValues + $value}px;
+    }@else{
+        $pxValues: #{$pxValues + $param};
+        $remValues: #{$remValues + $param};
+    }
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  #{$property}: $pxValues; //px fallback for older browsers
+  #{$property}: $remValues;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+/* ------------------------------------------ */

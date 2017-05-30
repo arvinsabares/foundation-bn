@@ -1,0 +1,18 @@
+nav:
+  -
+    name: Home
+    url: "#home"
+    active: active
+  -
+    name: About Amacon
+    url: "#about"
+  -
+    name: Why Block Nine?
+    url: "#block-nine"
+  -
+    name: Amenities
+    url: "#amenities"
+  -
+    name: Contact Us
+    url: "#contactome"
+nav-logo: bn-logo.png
