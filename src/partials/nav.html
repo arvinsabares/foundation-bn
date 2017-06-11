@@ -1,9 +1,9 @@
 {{!-- NAV BAR --}}
 <header class="l-nav nav">
-	<a href="#home" class="nav__logo">
-    <img src="{{root}}assets/img/{{global.nav-logo}}" class="nav__logo__img" alt="block nine logo">
+	<a href="#home" class="l-nav__logo">
+    <img src="{{root}}assets/img/{{global.nav-logo}}" alt="block nine logo">
 	</a>
-	<nav class="l-nav__list-group nav__list-group js-nav-collapse">
+	<nav class="l-nav__list-group js-nav-collapse">
 		<ul class="l-nav__list nav__list" data-magellan data-animation-easing="swing" data-animation-duration=400>
 			{{#each global.nav}}
 			<li><a href="{{url}}">{{name}}</a></li>
