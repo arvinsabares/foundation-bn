@@ -1,0 +1,65 @@
+.contact__content{
+  @extend .flex-item--row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @include px-to-rem(max-width, 1024px);
+  margin: 0 auto;
+
+  @media #{$tablet-large-or-higher} {
+    flex-wrap: nowrap;
+  }
+}
+
+.contact__form-group, .contact_info-details{
+  @include px-to-rem(max-width, 428px);
+  @include px-to-rem(padding, 0, 24px);
+  @include px-to-rem(margin-bottom, 36px);
+}
+
+.contact__header--form{
+  @include set-font($font-large, $light, 30px);
+}
+
+.contact__form{
+  @include px-to-rem(margin-top, 24px);
+}
+
+.contact__input-group{
+  @include px-to-rem(margin-bottom, 20px);
+}
+
+.contact__input-label{
+  @include set-font($font-small, $light, 15px);
+  @include px-to-rem(margin-bottom, 12px);
+}
+
+.contact__input-group .contact__input-box{
+  @include px-to-rem(padding, 0, 20px);
+  @include px-to-rem(border, 1px, solid, $grey-light);
+  @include px-to-rem(height, 44px);
+  margin: 0;
+  width: 100%;
+}
+
+.contact__radio-label{
+  @include set-font($font-small, $light, 18px);
+  @include px-to-rem(margin-right, 8px);
+}
+
+.contact__submit-btn{
+  @include btn-solid($brand-color-B);
+  @include px-to-rem(margin-top, 30px);
+}
+
+.contact__subtitle{
+  @include set-font($font-small, $light, 30px);
+}
+
+.contact__details{
+  @include set-font($font-larger, $light, 30px);
+  @include px-to-rem(margin-bottom, 18px);
+}
+
+.contact__header--info{
+  @include px-to-rem(margin-bottom, 14px);
+}

@@ -1,0 +1,42 @@
+.location{
+  @include px-to-rem('padding-top', 60px);
+
+  @media #{$tablet-xlarge-or-higher} {
+    @include px-to-rem('padding-top', 100px);
+  }
+}
+
+.location__content{
+  @include px-to-rem('max-width', 780px);
+  @include px-to-rem('padding', 0, 16px);
+  margin: 0 auto;
+}
+
+.location__subtitle{
+  @extend .custom-h4;
+  text-align: center;
+  @include px-to-rem('margin-bottom', 12px);
+
+}
+
+.location__header{
+  @extend .custom-h3-main;
+  color: $brand-color-A;
+  text-align: center;
+  @include px-to-rem('margin-bottom', 24px);
+}
+
+.location__desc{
+  @extend .custom-p;
+  text-align: center;
+}
+
+#location__map{
+  @include px-to-rem('height', 300px);
+  width: 100%;
+  @include px-to-rem('margin-top', 60px);
+
+  @media #{$tablet-xlarge-or-higher} {
+    @include px-to-rem('margin-top', 100px);
+  }
+}

@@ -81,7 +81,6 @@
 
     a{
       display: inline-block;
-      background: $white;
       width: 100%;
       @include px-to-rem(padding, 18px);
 

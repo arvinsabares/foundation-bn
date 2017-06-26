@@ -1,0 +1,35 @@
+.pricing-group{
+  text-align: center;
+  @include bg-overlay-img($bg-img-bldg-main, $black);
+  background-position: center bottom;
+  color: $white;
+}
+
+.pricing-group__red-overlay{
+  @include bg-overlay($brand-color-A, 0.5);
+  @include px-to-rem(padding, 42px, 0);
+
+  @media #{$tablet-large-or-higher} {
+    @include px-to-rem(padding, 62px, 0);
+  }
+}
+
+.pricing-group__header{
+  @include set-font(36px, $light, 46px);
+  @include px-to-rem(letter-spacing, 2px);
+  @include px-to-rem(margin-bottom, 16px);
+
+  @media #{$tablet-large-or-higher} {
+    @include set-font(48px, $light, 58px);
+  }
+}
+
+.pricing-group__desc{
+  @include set-font(16px, $light, 30px);
+  @include px-to-rem(letter-spacing, 2px);
+  text-transform: uppercase;
+
+  @media #{$tablet-large-or-higher} {
+    @include set-font(18px, $light, 30px);
+  }
+}

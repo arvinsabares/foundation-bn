@@ -5,14 +5,16 @@ nav:
     active: active
   -
     name: About Amacon
-    url: "#about"
+    url: "#builder"
   -
     name: Why Block Nine?
-    url: "#block-nine"
+    url: "#about"
   -
     name: Amenities
-    url: "#amenities"
+    url: "#gallery"
   -
     name: Contact Us
-    url: "#contactome"
+    url: "#contact"
 nav-logo: bn-logo.png
+builder-logo: amacon-logo.jpg
+builder-link: #

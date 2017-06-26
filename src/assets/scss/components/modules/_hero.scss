@@ -1,0 +1,169 @@
+#home{
+  &.hero{
+    @include bg-overlay($black, 0.8);
+
+    height: auto;
+    @include px-to-rem(margin-top, 60px);
+
+    @media #{$desktop-small-or-higher} {
+      @include bg-overlay-img($bg-img-hero, $black, 0.5);
+      @include px-to-rem(margin-top, 80px);
+    }
+  }
+
+  .hero__bg-overlay-mobile{
+    @include bg-overlay-img($bg-img-hero, $black, 0.5);
+    @include px-to-rem(padding, 50px, 0, 72px);
+
+    @media #{$tablet-large-or-higher} {
+      @include px-to-rem(padding, 170px, 0, 132px);
+    }
+
+    @media #{$desktop-small-or-higher} {
+      @include px-to-rem(padding, 170px, 0, 132px);
+    }
+  }
+
+  .hero__header{
+    @include px-to-rem(max-width, 940px);
+    @include px-to-rem(margin, 0, auto);
+    @include px-to-rem(padding, 0, 22px);
+    color: $white;
+
+    @media #{$desktop-small-or-higher} {
+      padding:0;
+    }
+  }
+
+  .hero__title{
+    @extend .custom-h1;
+    text-align: left;
+    text-transform: uppercase;
+    @include px-to-rem(margin-bottom, 20px);
+  }
+
+  .hero__desc{
+    @extend .custom-p;
+    font-weight: $regular;
+    text-align: left;
+    @include px-to-rem(max-width, 600px);
+    @include px-to-rem(margin-bottom, 30px);
+    @include px-to-rem(padding-left, 4px);
+  }
+
+  .hero__btn{
+    @extend .flex-item;
+    justify-content: flex-start;
+    @include px-to-rem(padding-left, 4px);
+  }
+
+  .hero__btn-link{
+    display: inline-block;
+    @include btn-border();
+  }
+
+
+  /* ------------------------------------------
+    FORM SECTION
+  --------------------------------------------- */
+
+  .hero__form{
+    @include bg-overlay($brand-color-A, 0.8);
+    @include px-to-rem(padding, 24px, 0, 28px);
+  }
+
+  .hero__msg{
+    color: $white;
+    @include set-font($font-larger, $regular, 28px);
+    @include px-to-rem(max-width, 600px);
+    @include px-to-rem(margin, 0, auto, 8px);
+    text-align: center;
+
+    @media #{$tablet-large-or-higher} {
+      margin: 0 auto;
+      @include px-to-rem(max-width, 940px);
+      @include px-to-rem(padding, 0, 80px);
+    }
+
+    span{
+      font-weight: $extra-bold;
+    }
+  }
+
+  .hero__form-group{
+    @extend .flex-item--column;
+    margin: 0 auto;
+
+    @media #{$tablet-large-or-higher} {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include px-to-rem(max-width, 940px);
+    }
+  }
+
+  .hero__form-input{
+    color: $grey-dark;
+    vertical-align: bottom;
+    width: auto;
+    @include px-to-rem(height, 44px);
+    @include px-to-rem(padding, 0, 20px);
+    @include px-to-rem(margin, 8px);
+
+    @media #{$tablet-large-or-higher} {
+      @include px-to-rem(margin, 20px, 6px, 26px);
+      @include px-to-rem(width, 240px);
+      flex-grow: 1;
+    }
+
+    @media #{$desktop-small-or-higher} {
+      @include px-to-rem(max-width, 245px);
+      @include px-to-rem(margin, 20px, 10px, 26px, 0);
+    }
+
+    &::placeholder{
+      color: $grey-light;
+    }
+  }
+
+  .hero__form-submit{
+    @include btn-solid($brand-color-B);
+    @include px-to-rem(margin, 0, 8px);
+    order: 2;
+
+    @media #{$tablet-large-or-higher} {
+      @include px-to-rem(width, 560px);
+      @include px-to-rem(margin, 20px, 10px, 0);
+    }
+
+    @media #{$desktop-small-or-higher} {
+      flex-grow: 1;
+      width: auto;
+      order: 0;
+      @include px-to-rem(max-width, 160px);
+      @include px-to-rem(margin, 20px, 0, 26px);
+    }
+  }
+
+  .hero__form-radio {
+    @extend .flex-item;
+    @extend .flex-center-center;
+    @include px-to-rem(margin, 8px, 0, 16px);
+
+    @media #{$tablet-large-or-higher} {
+      min-width: 100%;
+      margin: 0;
+      align-items: center;
+    }
+
+    label{
+      color: $white;
+      @include set-font($font-regular, $regular, 20px);
+      @include px-to-rem(margin, 0, 8px, 0, 0);
+    }
+
+    input{
+      @include px-to-rem(margin, 0, 4px, 0, 0);
+    }
+  }
+}

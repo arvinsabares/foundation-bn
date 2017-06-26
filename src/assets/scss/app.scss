@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -9,9 +10,9 @@ $global-flexbox: true;
 @include foundation-global-styles;
 // @include foundation-grid;
 @include foundation-flex-grid;
-@include foundation-typography;
+// @include foundation-typography;
 @include foundation-button;
-@include foundation-forms;
+// @include foundation-forms;
 // @include foundation-range-input;
 @include foundation-accordion;
 @include foundation-accordion-menu;
@@ -56,7 +57,16 @@ $global-flexbox: true;
 @import 'components/utils/variables';
 @import 'components/utils/mixins';
 @import 'components/utils/helpers';
+@import 'components/utils/custom-base';
 
 @import 'components/layouts/l-nav';
 
 @import 'components/modules/nav';
+@import 'components/modules/hero';
+@import 'components/modules/builder';
+@import 'components/modules/about';
+@import 'components/modules/gallery';
+@import 'components/modules/pricing';
+@import 'components/modules/location';
+@import 'components/modules/contact';
+@import 'components/modules/builder-footer';

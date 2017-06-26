@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800');
+
+
+/* ------------------------------------------
+  HAMBURGER MENU ICON FONT
+--------------------------------------------- */
+@font-face {
+  font-family: "responsivenav";
+  src:url("../img/icons/responsivenav.eot");
+  src:url("../img/icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../img/icons/responsivenav.ttf") format("truetype"),
+    url("../img/icons/responsivenav.woff") format("woff"),
+    url("../img/icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------------------------
+  BASE STYLINGS
+--------------------------------------------- */
+
+html,body,input, textarea, select, a {
+  font: $regular 1rem $font-stack;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $grey-dark;
+}
+
+html,body{
+  height:100%;
+}
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section,
+summary, hgroup, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=search] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border: none;
+}
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+// [type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus {
+//     outline: 2px solid $link-color;
+//     outline-offset: -1px;
+//     border: none;
+//     background-color: none;
+//     box-shadow: none;
+//     transition: none;
+// }

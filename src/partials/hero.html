@@ -1,0 +1,38 @@
+{{!-- HERO SECTION --}}
+<section id="home" class="hero" data-magellan-target="home">
+    {{!-- HEADER --}}
+    <div class="hero__bg-overlay-mobile">
+      <div class="hero__header">
+        <h1 class="hero__title">{{hero-title}}</h1>
+        <div class="hero__desc">{{hero-desc}}</div>
+        <div class="hero__btn">
+          <ul data-magellan data-animation-easing="swing" data-animation-duration=400>
+            <a href="#about" class="hero__btn-link">
+              {{hero-btn-text}}
+            </a>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- REGISTRATION FORM --}}
+    <div class="hero__form">
+      <div class="hero__msg">
+        <span>{{hero-msg-bold}}</span> {{hero-msg-regular}}
+      </div>
+      <form class="hero__form-group" action="" method="">
+        {{#each form}}
+			    <input class="hero__form-input" type="{{type}}" name="{{name}}" placeholder="{{placeholder}}" required>
+        {{/each}}
+        <input class="hero__form-submit" type="submit" value="{{form-submit-text}}" />
+
+        <div class="hero__form-radio x-hero__radio">
+          <label for="">{{form-radio-label}}</label>
+            {{#each form-radio}}
+              <input type="radio" name="realtor" value="{{value}}" required > <label for="">{{name}}</label>
+            {{/each}}
+        </div>
+      </form>
+    </div>
+</section>

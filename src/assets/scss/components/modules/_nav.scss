@@ -4,6 +4,7 @@
 
 .nav__list{
   a{
-    @extend .custom-nav-text;
+    @extend .bn-nav-text;
+    background: $grey-lighter;
   }
 }

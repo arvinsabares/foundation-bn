@@ -1,0 +1,35 @@
+<section id="contact" class="custom-section-padding" data-magellan-target="contact">
+  <div class="custom-section-header-group">
+    <h2 class="custom-section-header-title">{{contact-title}}</h2>
+    <hr class="custom-section-header-hr">
+  </div>
+  <div class="contact__content">
+    <div class="contact__form-group">
+      <h4 class="contact__header--form">{{contact-form-msg}}</h4>
+      <form class="contact__form" action="" method="">
+        {{#each form}}
+          <div class="contact__input-group">
+            <p class="contact__input-label">{{placeholder}}</p>
+            <input class="contact__input-box" type="{{type}}" name="{{name}}" required>
+          </div>
+        {{/each}}
+        <div class="contact__radio-group">
+          <label class="contact__radio-label" for="">{{form-radio-label}}</label>
+          {{#each form-radio}}
+          <input type="radio" name="realtor" value="{{value}}" required > <label class="contact__radio-label" for="">{{name}}</label>
+          {{/each}}
+        </div>
+        <input class="contact__submit-btn" type="submit" value="{{form-submit-text}}" />
+      </form>
+    </div>
+
+    <div class="contact_info-details">
+      <h4 class="contact__header--info custom-p">{{contact-info-msg}}</h4>
+      {{#each contact-info}}
+        <p class="contact__subtitle">{{subheader}}</p>
+        <p class="contact__details">{{info}}</p>
+      {{/each}}
+    </div>
+  </div>
+
+</section>

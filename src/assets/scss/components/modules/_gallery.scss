@@ -1,0 +1,62 @@
+.gallery__img-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media #{$tablet-xlarge-or-higher} {
+    @include px-to-rem(padding, 0 ,40px);
+  }
+}
+
+.gallery__img-main{
+  @include px-to-rem(max-width, 1215px);
+  width: 100%;
+  min-height: 1px; //IE height bug fix
+  @include px-to-rem(padding, 8px, 16px);
+  box-sizing: border-box;
+
+  @media #{$tablet-xlarge-or-higher} {
+    @include px-to-rem(padding, 8px);
+  }
+}
+
+.gallery__sub-group{
+  width: 100%;
+  min-height: 1px; //IE height bug fix
+  align-items: center;
+
+  @media #{$tablet-xlarge-or-higher} {
+    display: inline-flex;
+    justify-content: center;
+  }
+}
+
+.gallery__img{
+  width: 100%;
+  @include px-to-rem(padding, 8px, 16px);
+  box-sizing: border-box;
+
+  @media #{$tablet-xlarge-or-higher} {
+    @include px-to-rem(padding, 8px);
+    @include px-to-rem(max-width, 608px);
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.gallery__content{
+  text-align: center;
+  @include px-to-rem(max-width, 790px);
+  @include px-to-rem(padding, 0, 8px);
+  @include px-to-rem(margin, 36px, auto);
+
+  @media #{$tablet-xlarge-or-higher} {
+    @include px-to-rem(margin, 46px, auto);
+  }
+}
+
+.gallery__header{
+  @extend .custom-h3-main;
+  color: $brand-color-A;
+  @include px-to-rem(margin-bottom, 20px);
+}

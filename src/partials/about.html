@@ -1,0 +1,22 @@
+<section id="about" class="about custom-section-padding" data-magellan-target="about">
+  <div class="about__header custom-section-header-group">
+    <h2 class="custom-section-header-title">{{about-title}}</h2>
+    <hr class="custom-section-header-hr">
+  </div>
+  <div class="about__group">
+    {{#each about-content}}
+      <div class="about__list">
+        <div class="about__list-box">
+          <div class="about__content">
+            <h4 class="custom-h4">{{subheader}}</h4>
+            <h3 class="custom-h3-main">{{header}}</h3>
+            <p class="custom-p">{{desc}}</p>
+          </div>
+        </div>
+        <div class="about__list-box">
+          <img src="{{root}}assets/img/{{img}}" alt="{{alt}}" class="about__content-img">
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
