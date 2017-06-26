@@ -85,6 +85,7 @@
       @include px-to-rem(padding, 18px);
 
       @media #{$desktop-small-or-higher} {
+        background: $white;
         width: auto;
         @include px-to-rem(padding, 32px, 18px);
       }
